@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Energy Assistant
-version: "0.0.8"
+version: "0.0.9"
 slug: energy_assistant
 description: Energy Assistant helps you to control your energy consumption.
 url: "https://github.com/pail23/energy-assistant-backend/tree/main/example"
@@ -13,13 +13,11 @@ arch:
 init: false
 panel_icon: mdi:home-lightning-bolt
 panel_admin: false
-boot: auto
 stage: experimental
 ingress: true
 ingress_port: 80
 map:
   - config:rw
-  - data:rw
 image: ghcr.io/pail23/energy-assistant-backend
 options:
   config_file: "/config/energy_assistant.yaml"
