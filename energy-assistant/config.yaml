@@ -21,7 +21,5 @@ map:
 image: ghcr.io/pail23/energy-assistant-backend
 options:
   config_file: "/config/energy_assistant.yaml"
-  sqlite_file: "/data/energy_assistant.db"
 schema:
   config_file: str
-  sqlite_file: str
