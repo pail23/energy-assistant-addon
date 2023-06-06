@@ -15,7 +15,7 @@ panel_icon: mdi:home-lightning-bolt
 panel_admin: false
 stage: experimental
 ingress: true
-ingress_port: 80
+ingress_port: 5000
 map:
   - config:rw
 image: ghcr.io/pail23/energy-assistant-backend
