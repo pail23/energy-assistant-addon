@@ -18,7 +18,7 @@ ingress: true
 ingress_port: 5000
 map:
   - config:rw
-image: ghcr.io/pail23/energy-assistant-backend
+image: ghcr.io/pail23/energy-assistant-addon
 options:
   config_file: "/config/energy_assistant.yaml"
 schema:
