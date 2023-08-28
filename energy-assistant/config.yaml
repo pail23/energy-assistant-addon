@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Energy Assistant
-version: "0.0.53"
+version: "0.0.57"
 slug: energy_assistant
 description: Energy Assistant helps you to control your energy consumption.
 url: "https://github.com/pail23/energy-assistant-backend/tree/main/example"
