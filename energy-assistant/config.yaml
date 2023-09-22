@@ -22,7 +22,9 @@ map:
 image: ghcr.io/pail23/energy-assistant-backend
 options:
   config_file: "/config/energy_assistant.yaml"
+  log_level: info
 schema:
   config_file: str
+  log_level: list(debug|info|warning|error)
 ports:
   5000/tcp: 5000
