@@ -28,7 +28,7 @@ ENV APP_CONFIG_FILE=local
 
 LABEL \
     org.opencontainers.image.title="Energy Assistant" \
-    org.opencontainers.image.description="Energy Assistant" \
+    org.opencontainers.image.description="Energy Assistant helps you to control your energy consumption." \
     org.opencontainers.image.source="https://github.com/pail23/energy-assistant-addon" \
     org.opencontainers.image.authors="The Energy Assistant Team" \
     org.opencontainers.image.documentation="https://github.com/pail23/energy-assistant-addon/discussions" \

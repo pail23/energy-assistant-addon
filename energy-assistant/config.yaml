@@ -3,7 +3,7 @@ name: Energy Assistant
 version: "0.0.91"
 slug: energy_assistant
 description: Energy Assistant helps you to control your energy consumption.
-url: "https://github.com/pail23/energy-assistant-backend/tree/main/example"
+url: "https://github.com/pail23/energy-assistant-addon"
 arch:
   - armv7
   - aarch64
