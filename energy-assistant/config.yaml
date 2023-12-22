@@ -5,11 +5,9 @@ slug: energy_assistant
 description: Energy Assistant helps you to control your energy consumption.
 url: "https://github.com/pail23/energy-assistant-backend/tree/main/example"
 arch:
-  - armhf
   - armv7
   - aarch64
   - amd64
-  - i386
 init: false
 panel_icon: mdi:home-lightning-bolt
 panel_admin: false

@@ -9,8 +9,15 @@ RUN \
     curl -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
-RUN pip install energy-assistant==${EASS_VERSION} && mkdir /data
 
+RUN \
+    apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3 \
+        python3-pip \
+    && pip install energy-assistant==${EASS_VERSION}  \
+    && mkdir /data \
+    && rm -rf /var/lib/apt/lists/*
 # Copy root filesystem
 COPY rootfs /
 
