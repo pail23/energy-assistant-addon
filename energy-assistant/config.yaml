@@ -17,7 +17,7 @@ ingress_port: 5000
 homeassistant_api: true
 map:
   - config:rw
-image: ghcr.io/pail23/energy-assistant-addon
+image: ghcr.io/pail23/{arch}-addon-energy-assistant
 options:
   config_file: "/config/energy_assistant.yaml"
   log_level: info
