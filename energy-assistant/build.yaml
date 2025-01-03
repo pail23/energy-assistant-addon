@@ -10,4 +10,4 @@ labels:
   org.opencontainers.image.licenses: "MIT"
 args:
   TEMPIO_VERSION: "2021.09.0"
-  EASS_VERSION: 0.1.11
+  EASS_VERSION: 0.1.20
