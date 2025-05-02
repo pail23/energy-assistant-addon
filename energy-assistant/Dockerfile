@@ -11,14 +11,7 @@ RUN \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
 RUN \
-    apt-get update \
-    && apt-get install -y --no-install-recommends \
-        git \
-        build-essential \
-        gcc \
-        python3 \
-        python3-pip \
-    && pip install --break-system-packages energy-assistant==${EASS_VERSION}  \
+    pip install --break-system-packages energy-assistant==${EASS_VERSION}  \
     && mkdir /data \
     && rm -rf /var/lib/apt/lists/*
 # Copy root filesystem
