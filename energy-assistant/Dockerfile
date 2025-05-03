@@ -9,10 +9,10 @@ ARG TEMPIO_VERSION BUILD_ARCH EASS_VERSION
 ENV PATH=/root/.local/bin:$PATH
 ENV APP_CONFIG_FILE=local
 
-
 RUN \
     curl -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}" \
+    && apt-get update && apt-get install -y --no-install-recommends  git build-essential gcc \
     && uv tool install --index-strategy unsafe-best-match energy-assistant==${EASS_VERSION} \
     && mkdir /data
 
