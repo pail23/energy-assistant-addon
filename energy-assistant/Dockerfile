@@ -15,7 +15,7 @@ ENV PATH=/root/.local/bin:$PATH
 
 RUN \
     uv tool install --index-strategy unsafe-best-match energy-assistant==${EASS_VERSION} \
-    && mkdir /data \
+    && mkdir /data
 
 # Copy root filesystem
 COPY rootfs /
