@@ -10,8 +10,10 @@ RUN \
     curl -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
+
 RUN \
-    pip install --break-system-packages energy-assistant==${EASS_VERSION}  \
+    apk add --no-cache hdf5 \
+    && pip install --break-system-packages energy-assistant==${EASS_VERSION}  \
     && mkdir /data \
     && rm -rf /var/lib/apt/lists/*
 # Copy root filesystem
