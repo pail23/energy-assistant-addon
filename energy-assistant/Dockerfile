@@ -2,6 +2,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+COPY --from=ghcr.io/astral-sh/uv /uv /uvx /bin/
 
 # Execute during the build of the image
 ARG TEMPIO_VERSION BUILD_ARCH EASS_VERSION
@@ -10,12 +11,12 @@ RUN \
     curl -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
+ENV PATH=/root/.local/bin:$PATH
 
 RUN \
-    apk add --no-cache hdf5 \
-    && pip install --break-system-packages energy-assistant==${EASS_VERSION}  \
+    uv tool install --index-strategy unsafe-best-match energy-assistant==${EASS_VERSION} \
     && mkdir /data \
-    && rm -rf /var/lib/apt/lists/*
+
 # Copy root filesystem
 COPY rootfs /
 

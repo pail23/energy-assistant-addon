@@ -1,8 +1,8 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
-  amd64: ghcr.io/home-assistant/amd64-base-python:3.12-alpine3.21
-  aarch64: ghcr.io/home-assistant/aarch64-base-python:3.12-alpine3.21
-  armv7: ghcr.io/home-assistant/armv7-base-python:3.12-alpine3.21
+  amd64: ghcr.io/home-assistant/amd64-base-debian:bookworm
+  aarch64: ghcr.io/home-assistant/aarch64-base-debian:bookworm
+  armv7: ghcr.io/home-assistant/armv7-base-debian:bookworm
 labels:
   org.opencontainers.image.title: "Energy Assistant Add-on"
   org.opencontainers.image.description: "Energy Assistant helps you to control your energy consumption."
